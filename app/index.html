@@ -1,0 +1,146 @@
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blockchain - IoT Smart Metering Demo</title>
+
+  <style>
+    body {
+      text-align: center;
+    }
+
+    #g1 {
+      width: auto;
+      height: auto;
+      display: inline-block;
+      margin: 1em;
+    }
+
+    #g2,
+    #g3,
+    #g4 {
+      width: auto;
+      height: auto;
+      display: inline-block;
+      margin: 1em;
+    }
+
+    p {
+      display: block;
+      width: 450px;
+      margin: 2em auto;
+      text-align: left;
+    }
+  </style>
+
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" type="image/png" href="http://thedapps.com/favicon-32x32.png" sizes="32x32" />
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+</head>
+
+<body>
+  <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <!-- top -->
+  <!--div class="item top">
+    <a href="http://thedapps.com">
+      <img class="logo">
+    </a>
+  </div>
+  <!-- About -->
+  <!--div class="item about">
+    <img class="workbench">
+    <p class="text">
+      Web3 Workbench Application developed in section "Developing DAPPs with Web3"
+      <ul>
+        <li>To connect with geth or TestRPC provide URL and hit connect</li>
+        <li>To connect with MetaMask - enable MetaMask and reload</li>
+      </ul>
+    </p>
+  </div>
+
+  <!-- Setup & Version -->
+  <div>
+    <p></p>
+    <h1>Blockchain based - Smart Meter</h1>
+    <h6 id="metamask"></h6>
+
+    <!-- setup  -->
+    <div class="sidekick">
+
+      <h1>Meter Details</h1>
+      <canvas id="g1"></canvas>
+
+      <h3 id="preview-text"></h3>
+      <h4>(Utilization Cents/hr)</h4>
+    </div>
+
+    <!-- version -->
+    <div class="sidekick">
+      <h1>Re-Charge</h1>
+      <span/>
+      <!--div id='invoke_details'></div-->
+      <h3 id='invoke_return_value'>Fetching from Ethereum...</h3>
+      <h4>Current Balance ( $ )</h4>
+      <h5 id='invoke_contracttransactionhash'></h5>
+      <p><a href="" id="invoke_contracttransactionhash_link" target="_blank"></a></p>
+      <div><input type="text" id="donar" size="30" placeholder="Your Name" /></div>
+      <p>
+      <span><button onclick="doSendCalcTransaction(10)">Recharge - 10$</button></span>
+      <span><button onclick="doSendCalcTransaction(50)">Recharge - 50$</button></span>
+      <span><button onclick="doSendCalcTransaction(100)">Recharge - 100$</button></span>
+      </p>
+      <h4>Keep the Smart Meter alive by Ether donation (demo)</h4>
+    </div>
+
+    <!-- version -->
+    <div class="sidekick">
+      <h1>Last 5 Transactions</h1>
+      
+      <span/>
+      <!--div id='invoke_details'></div-->
+      <h4 id='invoke_return_value'>Fetching from Ethereum...</h4>
+      <table>
+          <tr><th>Name</th><th>Amount</th><th>When</th></tr>
+          <tr><td id="name0">Name</td><td id="amt0">Amount</td><td id="time0">When</td></tr>
+          <tr><td id="name1">Name</td><td id="amt1">Amount</td><td id="time1">When</td></tr>
+          <tr><td id="name2">Name</td><td id="amt2">Amount</td><td id="time2">When</td></tr>
+          <tr><td id="name3">Name</td><td id="amt3">Amount</td><td id="time3">When</td></tr>
+          <tr><td id="name4">Name</td><td id="amt4">Amount</td><td id="time4">When</td></tr>
+      </table>
+
+    </div>
+
+  </div>
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/bignumber.js/bignumber.js"></script>
+  <script src="/bower_components/crypto-js/index.js"></script>
+  <script src="/bower_components/web3/dist/web3.js"></script>
+  <script src="/bower_components/web3/dist/web3.min.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/gauge.min.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>
